@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.footer {
+    color: var(--color-dark-40);
+
+    &__extra {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: rem(40);
+
+        @include laptop {
+            padding-block: rem(24);
+        }
+    }
+       
+}

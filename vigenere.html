@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphers | Vigenere</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+   <header class="header" data-js-header>
+    <div class="header__promo">
+        <div class="header__promo-inner container">
+            <a href="/" class="header__promo-link">
+                <span class="icon icon--yellow-arrow">Шифры: Несерьёзный путеводитель</span>
+            </a>
+        </div>
+    </div>
+    <div class="header__body">
+        <div class="header__body-inner container">
+            <a
+                href="/" 
+                class="header__logo logo" 
+                title="Home" 
+                aria-label="Home"
+            >
+                <img 
+                    src="./images/logo1.svg" 
+                    alt="" 
+                    class="logo__image"
+                    width="179" height="50"
+                >
+            </a>
+            <div class="header__overlay" data-js-header-overlay>
+                <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header_menu-item">
+                        <a href="./index.html" class="header__menu-link">Главная</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./cezar.html" class="header__menu-link">Цезарь</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./vigenere.html" class="header__menu-link is-active">Квадрат Виженера</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rc5.html" class="header__menu-link ">RC5</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rsa.html" class="header__menu-link">RSA</a>
+                    </li>
+                </ul>
+                </nav>
+                <a href="javascript:void(0)" class="header__bag-link button button--accent bug-feature-btn">
+                    Это баг или фича?
+                </a>
+            </div>
+            <button 
+                class="header__burger-button burger-button visible-mobile"
+                type="button"
+                aria-label="Open menu"
+                title="Open menu"
+                data-js-header-burger-button
+            >
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
+        </div>
+    </div>
+   </header>
+   <main>
+    <section class="cipher-details" aria-labelledby="cipher-details-title">
+        <header class="cipher-details__banner" style="--bgImg: url('../../images/vigenere_details/vigenere_bg.jpg')">
+            <div class="cipher-details__banner-inner container">
+                <h1 class="blog-details__title" id="cipher-details-title">Надёжность по Виженеру</h1>
+                <p class="cipher__descriotion">
+                    Гарантия: 300 лет невзламываемости (пока не пришел тот парень с фамилией Касиски)
+                </p>
+            </div></header>
+        <div class="cipher-details__body">
+          <div class="vigenere-details__cipher cipher-container" action="/">
+            <div class="cipher">
+              <div class="cipher__cell cipher__cell--wide field">
+                <label class="field__label" for="vigenere-text">Исходный текст</label>
+                <textarea
+                  class="field__control"
+                  id="vigenere-text"
+                  placeholder="Введите текст..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="cipher__cell field">
+                <label class="field__label" for="vigenere-key">Ключ</label>
+                <input 
+                  type="text"
+                  class="field__control"
+                  id="vigenere-key"
+                  placeholder="Введите ключевое слово..."
+                />
+              </div>
+
+              <div class="cipher__cell cipher__cell--wide cipher__buttons">
+                <div class="cipher__button">
+                  <button class="button button--accent" type="button" data-action="vigenere-encrypt">
+                    Зашифровать
+                  </button>
+                </div>
+                <div class="cipher__button">
+                  <button class="button button--accent" type="button" data-action="vigenere-decrypt">
+                    Расшифровать
+                  </button>
+                </div>
+              </div>
+
+              <div class="cipher__cell cipher__cell--wide field">
+                <label class="field__label" for="vigenere-result">Результат</label>
+                <textarea
+                  class="field__control field__control--result"
+                  id="vigenere-result"
+                  placeholder="Здесь появится результат..."
+                  readonly
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__extra">
+            <p class="footer__copyright"> P.s. Автор — обычный смертный, который очень старался, так что баги — это не баги, а сюрпризы от вселенной! </p>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphers | Home</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+   <header class="header" data-js-header>
+    <div class="header__promo">
+        <div class="header__promo-inner container">
+            <a href="/" class="header__promo-link">
+                <span class="icon icon--yellow-arrow">Шифры: Несерьёзный путеводитель</span>
+            </a>
+        </div>
+    </div>
+    <div class="header__body">
+        <div class="header__body-inner container">
+            <a
+                href="/" 
+                class="header__logo logo" 
+                title="Home" 
+                aria-label="Home"
+            >
+                <img 
+                    src="./images/logo1.svg" 
+                    alt="" 
+                    class="logo__image"
+                    width="179" height="50"
+                >
+            </a>
+            <div class="header__overlay" data-js-header-overlay>
+                <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header_menu-item">
+                        <a href="./index.html" class="header__menu-link is-active">Главная</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./cezar.html" class="header__menu-link">Цезарь</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./vigenere.html" class="header__menu-link">Квадрат Виженера</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rc5.html" class="header__menu-link ">RC5</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rsa.html" class="header__menu-link">RSA</a>
+                    </li>
+                </ul>
+                </nav>
+                <a href="javascript:void(0)" class="header__bag-link button button--accent bug-feature-btn">
+                    Это баг или фича?
+                </a>
+            </div>
+            <button 
+                class="header__burger-button burger-button visible-mobile"
+                type="button"
+                aria-label="Open menu"
+                title="Open menu"
+                data-js-header-burger-button
+            >
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
+        </div>
+    </div>
+   </header>
+   <main>
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__main container">
+            <div class="hero__body">
+                <h1 class="hero__title" id="hero-title">Лаборатория криптографического хаоса: 4 опыта над буквами</h1>
+                <div class="hero__description">
+                    <p>Место, где буквы танцуют, цифры путаются, а алгоритмы ведут себя непредсказуемо. Ваша задача — выжить и нажать все кнопки!</p>
+                </div>
+            </div>
+            <div class="hero__metrics metrics full-vw-line full-vw-line--top full-vw-line--left">
+                <dl class="metrics__list">
+                    <div class="metrics__item">
+                        <dt class="metrics__key">часов тупления</dt>
+                        <dd class="metrics__value h3">56<span class="metrics__sign">+</span></dd>
+                    </div>
+                    <div class="metrics__item">
+                        <dt class="metrics__key">нервных клеток: RIP</dt>
+                        <dd class="metrics__value h3">18<span class="metrics__sign">+</span></dd>
+                    </div>
+                    <div class="metrics__item">
+                        <dt class="metrics__key">а зачем я это делаю?</dt>
+                        <dd class="metrics__value h3">7<span class="metrics__sign">+</span></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="hero__image"></div>
+        </div>
+    </section>
+   </main>
+   <footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__extra">
+            <p class="footer__copyright"> P.s. Автор — обычный смертный, который очень старался, так что баги — это не баги, а сюрпризы от Вселенной! </p>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>

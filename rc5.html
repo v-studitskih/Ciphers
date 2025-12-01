@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphers | RC5</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+   <header class="header" data-js-header>
+    <div class="header__promo">
+        <div class="header__promo-inner container">
+            <a href="/" class="header__promo-link">
+                <span class="icon icon--yellow-arrow">Шифры: Несерьёзный путеводитель</span>
+            </a>
+        </div>
+    </div>
+    <div class="header__body">
+        <div class="header__body-inner container">
+            <a
+                href="/" 
+                class="header__logo logo" 
+                title="Home" 
+                aria-label="Home"
+            >
+                <img 
+                    src="./images/logo1.svg" 
+                    alt="" 
+                    class="logo__image"
+                    width="179" height="50"
+                >
+            </a>
+            <div class="header__overlay" data-js-header-overlay>
+                <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header_menu-item">
+                        <a href="./index.html" class="header__menu-link">Главная</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./cezar.html" class="header__menu-link">Цезарь</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./vigenere.html" class="header__menu-link ">Квадрат Виженера</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rc5.html" class="header__menu-link is-active">RC5</a>
+                    </li>
+                    <li class="header_menu-item">
+                        <a href="./rsa.html" class="header__menu-link">RSA</a>
+                    </li>
+                </ul>
+                </nav>
+                <a href="javascript:void(0)" class="header__bag-link  button button--accent bug-feature-btn">
+                    Это баг или фича?
+                </a>
+            </div>
+            <button 
+                class="header__burger-button burger-button visible-mobile"
+                type="button"
+                aria-label="Open menu"
+                title="Open menu"
+                data-js-header-burger-button
+            >
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
+        </div>
+    </div>
+   </header>
+   <main>
+   <section class="cipher-details" aria-labelledby="cipher-details-title">
+    <header class="cipher-details__banner" style="--bgImg: url('../../images/rc5_details/rc5-bg.jpg')">
+        <div class="cipher-details__banner-inner container">
+            <h1 class="blog-details__title" id="cipher-details-title">RC5-32: Дао битового потока</h1>
+            <p class="cipher__description">
+               Иногда чтобы что-то спрятать, нужно это хорошенько перемешать
+            </p>
+        </div>
+    </header>
+    
+    <div class="cipher-details__body">
+        <div class="rc5-details__cipher cipher-container">
+            <div class="cipher">
+                <div class="cipher__cell cipher__cell--wide field">
+                    <label class="field__label">Настройки RC5</label>
+                    <div class="rc5-settings">
+                        <div class="setting-group">
+                            <label class="setting-label" for="rc5-rounds">Число раундов (0-255)</label>
+                            <input 
+                                class="field__control" 
+                                type="number" 
+                                id="rc5-rounds" 
+                                value="12" 
+                                min="0" 
+                                max="255"
+                            >
+                        </div>
+                        <div class="setting-group">
+                            <label class="setting-label" for="rc5-key">Ключ (0-255)</label>
+                            <input
+                                class="field__control"
+                                type="number"
+                                id="rc5-key"
+                                value="0"
+                                min="0"
+                                max="255"
+                                required
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cipher__cell cipher__cell--wide field">
+                    <label class="field__label" for="rc5-text">Исходный текст</label>
+                    <textarea
+                        class="field__control"
+                        id="rc5-text"
+                        placeholder="Введите текст для шифрования..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="cipher__cell cipher__cell--wide cipher__buttons">
+                    <div class="cipher__button">
+                        <button class="button button--accent" type="button" data-action="rc5-encrypt">
+                            Зашифровать
+                        </button>
+                    </div>
+                    <div class="cipher__button">
+                        <button class="button button--accent" type="button" data-action="rc5-decrypt">
+                            Расшифровать
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cipher__cell cipher__cell--wide field">
+                    <label class="field__label" for="rc5-result">Результат</label>
+                    <textarea
+                        class="field__control field__control--result"
+                        id="rc5-result"
+                        placeholder="Здесь появится результат..."
+                        readonly
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   </main>
+   <footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__extra">
+            <p class="footer__copyright"> P.s. Автор — обычный смертный, который очень старался, так что баги — это не баги, а сюрпризы от вселенной! </p>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>

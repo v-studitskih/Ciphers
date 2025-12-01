@@ -1,0 +1,10 @@
+@use '../helpers/' as *;
+
+.bug-feature-btn {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bug-feature-btn:hover {
+    transform: none !important; 
+}

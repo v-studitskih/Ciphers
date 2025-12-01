@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.cipher-details {
+    &__banner {
+        display: flex;
+        align-items: end;
+        min-height: fluid(850, 281);
+        padding-block: fluid(65, 17);
+        text-align: center;
+        background: 
+        linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.88) 75.52%, #141414 100%), 
+        var(--bgImg) center / cover no-repeat;
+    }
+
+    &__title {
+        @include fluid-text(64, 28);
+        font-family: var(--font-family-base);
+        font-weight: 600;
+    }
+}

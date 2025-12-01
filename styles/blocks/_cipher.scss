@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.cipher {
+
+  &-container {
+    max-width: rem(800);
+  margin: 0 auto;
+  padding: rem(30);
+  border: var(--border);
+  border-radius: rem(12);
+  background-color: var(--color-dark-5);
+  
+  @include laptop {
+    max-width: rem(600);
+    padding: rem(20);
+  }
+  
+  @include mobile {
+    max-width: 100%;
+    padding: rem(16);
+    margin-inline: rem(16);
+  }
+  }
+  display: grid;
+  gap: fluid(30, 20) rem(30);
+
+  @include mobile-s-above {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__cell {
+    &--wide {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(16);
+    width: 100%;
+
+    @include mobile-s {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__button {
+    flex: 1;
+    
+    .button {
+      width: 100%;
+      justify-content: center;
+      min-height: rem(50);
+      
+      @include laptop {
+        min-height: rem(45);
+      }
+    }
+  }
+}
+.rc5-settings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(16);
+  margin-top: rem(8);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: rem(12);
+  }
+}
+
+.setting {
+  &-group {
+     display: flex;
+    flex-direction: column;
+    gap: rem(6);
+  }
+  &-label {
+    font-size: rem(14);
+    font-weight: 500;
+    color: var(--color-gray-2);
+    line-height: 1.2;
+  }
+}

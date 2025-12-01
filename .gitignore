@@ -1,0 +1,25 @@
+
+@"
+# VS Code
+.vscode/
+
+# Временные файлы
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SCSS/SASS
+.sass-cache/
+*.scss.map
+*.css.map
+
+# Папка node_modules (если используете npm)
+node_modules/
+"@ | Out-File .gitignore -Encoding UTF8
