@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciphers | Vigenere</title>
+    <title>Ciphers | RC4</title>
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
@@ -41,13 +41,13 @@
                         <a href="./cezar.html" class="header__menu-link">Цезарь</a>
                     </li>
                     <li class="header_menu-item">
-                        <a href="./vigenere.html" class="header__menu-link is-active">Квадрат Виженера</a>
+                        <a href="./vigenere.html" class="header__menu-link">Квадрат Виженера</a>
                     </li>
                     <li class="header_menu-item">
-                        <a href="./rc5.html" class="header__menu-link ">RC5</a>
+                        <a href="./rc5.html" class="header__menu-link">RC5</a>
                     </li>
                     <li class="header_menu-item">
-                        <a href="./rc4.html" class="header__menu-link">RC4</a>
+                        <a href="./rc4.html" class="header__menu-link is-active">RC4</a>
                     </li>
                     <li class="header_menu-item">
                         <a href="./rsa.html" class="header__menu-link">RSA</a>
@@ -55,7 +55,7 @@
                 </ul>
                 </nav>
                 <a href="javascript:void(0)" class="header__bag-link button button--accent bug-feature-btn">
-                    Это баг или фича?
+                  Это баг или фича?
                 </a>
             </div>
             <button 
@@ -74,54 +74,55 @@
    </header>
    <main>
     <section class="cipher-details" aria-labelledby="cipher-details-title">
-        <header class="cipher-details__banner" style="--bgImg: url('../../images/vigenere_details/vigenere_bg.jpg')">
+        <header class="cipher-details__banner" style="--bgImg: url('../../images/rc4_details/rc4-bg.jpg')">
             <div class="cipher-details__banner-inner container">
-                <h1 class="blog-details__title" id="cipher-details-title">Надёжность по Виженеру</h1>
-                <p class="cipher__descriotion">
-                    Гарантия: 300 лет невзламываемости (пока не пришел тот парень с фамилией Касиски)
+                <h1 class="blog-details__title" id="cipher-details-title">RC4: Поток сознания в мире битов</h1>
+                <p class="cipher__description">
+                    Он пережил больше уязвимостей, чем ваша первая любовь — расставаний. И всё ещё жив!
                 </p>
-            </div></header>
+            </div>
+        </header>
         <div class="cipher-details__body">
-          <div class="vigenere-details__cipher cipher-container" action="/">
+          <div class="cipher-details__cipher cipher-container">
             <div class="cipher">
               <div class="cipher__cell cipher__cell--wide field">
-                <label class="field__label" for="vigenere-text">Исходный текст</label>
+                <label class="field__label" for="rc4-text">Исходный текст</label>
                 <textarea
                   class="field__control"
-                  id="vigenere-text"
+                  id="rc4-text"
                   placeholder="Введите текст..."
                   required
                 ></textarea>
               </div>
 
               <div class="cipher__cell field">
-                <label class="field__label" for="vigenere-key">Ключ</label>
+                <label class="field__label" for="rc4-key">Ключ</label>
                 <input 
                   type="text"
                   class="field__control"
-                  id="vigenere-key"
+                  id="rc4-key"
                   placeholder="Введите ключевое слово..."
                 />
               </div>
 
               <div class="cipher__cell cipher__cell--wide cipher__buttons">
                 <div class="cipher__button">
-                  <button class="button button--accent" type="button" data-action="vigenere-encrypt">
+                  <button class="button button--accent" type="button" data-action="rc4-encrypt">
                     Зашифровать
                   </button>
                 </div>
                 <div class="cipher__button">
-                  <button class="button button--accent" type="button" data-action="vigenere-decrypt">
+                  <button class="button button--accent" type="button" data-action="rc4-decrypt">
                     Расшифровать
                   </button>
                 </div>
               </div>
 
               <div class="cipher__cell cipher__cell--wide field">
-                <label class="field__label" for="vigenere-result">Результат</label>
+                <label class="field__label" for="rc4-result">Результат</label>
                 <textarea
                   class="field__control field__control--result"
-                  id="vigenere-result"
+                  id="rc4-result"
                   placeholder="Здесь появится результат..."
                   readonly
                 ></textarea>
@@ -129,9 +130,9 @@
             </div>
           </div>
         </div>
-    </section>
-  </main>
-  <footer class="footer">
+      </section>
+    </main>
+   <footer class="footer">
     <div class="footer__inner container">
         <div class="footer__extra">
             <p class="footer__copyright"> P.s. Автор — обычный смертный, который очень старался, так что баги — это не баги, а сюрпризы от вселенной! </p>
